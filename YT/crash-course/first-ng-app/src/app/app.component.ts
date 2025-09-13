@@ -12,8 +12,20 @@ export class AppComponent {
   title = 'first-ng-app';
 
   constructor () {
-    console.log("app component > constructor");
-    
+    console.log("app.component loaded");
   }
 
 }
+
+
+/*
+app
+header
+home
+greeting
+counter
+
+todos service
+todos
+todo-item
+*/

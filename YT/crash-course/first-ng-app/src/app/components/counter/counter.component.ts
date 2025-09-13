@@ -10,7 +10,9 @@ export class CounterComponent {
   counter = signal(0);
   resetDisabled = true;
 
-  constructor() {}
+  constructor() {
+    console.log("counter.component loaded");
+  }
 
   updateCounter(action: any) {
     switch(action) {

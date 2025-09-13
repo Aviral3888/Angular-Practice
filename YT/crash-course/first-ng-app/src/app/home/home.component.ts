@@ -14,4 +14,10 @@ export class HomeComponent {
   keyUpHandler(event: KeyboardEvent){
     console.log("Key up handler called:" , event.key);
   }
+
+  constructor() {
+    console.log("home.component loaded");
+    
+  }
+  
 }

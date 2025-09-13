@@ -10,4 +10,8 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   title = signal('My First angular app');
   oldTitle = " - Just for practice";
+
+  constructor() {
+    console.log("header.component loaded");
+  }
 }

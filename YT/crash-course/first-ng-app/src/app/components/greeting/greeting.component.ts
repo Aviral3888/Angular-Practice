@@ -8,4 +8,8 @@ import { Component, input } from '@angular/core';
 })
 export class GreetingComponent {
   message = input('from child component');
+
+  constructor() {
+    console.log("greeting.component loaded");
+  }
 }
