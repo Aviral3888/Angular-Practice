@@ -1,11 +1,19 @@
-<p>{{ todoItems()[0].title }}</p>
+<h3>Todos</h3>
 
-<!-- <app-todo-items /> -->
+<!-- Older Decorators  -->
+<!-- <p *ngIf="todoLoader">Loading...</p> -->
 
-<div *ngFor="let todo of todoItems()">
-  <p>{{ todo.id }} - {{ todo.title }}</p>
-</div>
+<!-- @if and @for decorator - new version  -->
 
-@for(todo of todoItems(); track todo.id) {
-    <p>{{ todo.title }}</p>
+@if(todoLoader) {
+  <p>Loading...</p>
 }
+
+<ul class="todos">
+  @for(todo of todoItems(); track todo.id) {
+  <li class="todos__item">
+    <input id="todo-{{ todo.id }}" type="checkbox" value="todo.completed" />
+    <label for="todo-{{ todo.id }}">{{ todo.title }}</label>
+  </li>
+  }
+</ul>
